@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Портфоліо та Магазин Alex Sak</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <nav>
+    <div class="logo">Alex Sak</div>
+    <ul>
+      <li><a href="#about">Про мене</a></li>
+      <li><a href="#portfolio">Портфоліо</a></li>
+      <li><a href="#shop">Магазин</a></li>
+      <li><a href="#contact">Контакти</a></li>
+    </ul>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>Ласкаво просимо на моє Портфоліо</h1>
+  <p>Пропоную послуги з веб-дизайну, графіки та 3D-моделювання</p>
+  <button onclick="scrollToSection('contact')">Замовити</button>
+</section>
+
+<section id="about" class="about">
+  <h2>Про мене</h2>
+  <p>Привіт! Я Алекс, веб-дизайнер та 3D-художник. Маю досвід роботи над різними проектами та допомагаю клієнтам створювати круті сайти та графіку.</p>
+  <div class="skills">
+    <div class="skill">HTML</div>
+    <div class="skill">CSS</div>
+    <div class="skill">JavaScript</div>
+    <div class="skill">Photoshop</div>
+    <div class="skill">Blender</div>
+    <div class="skill">Figma</div>
+  </div>
+</section>
+
+<section id="portfolio" class="portfolio">
+  <h2>Портфоліо</h2>
+  <div class="portfolio-grid">
+    <div class="portfolio-item">
+      <div class="placeholder">Проект 1</div>
+      <div class="info">
+        <h3>Проект 1</h3>
+        <p>Веб-дизайн сайту для клієнта.</p>
+      </div>
+    </div>
+    <div class="portfolio-item">
+      <div class="placeholder">Проект 2</div>
+      <div class="info">
+        <h3>Проект 2</h3>
+        <p>Графічний дизайн банеру для реклами.</p>
+      </div>
+    </div>
+    <div class="portfolio-item">
+      <div class="placeholder">Проект 3</div>
+      <div class="info">
+        <h3>Проект 3</h3>
+        <p>3D-моделювання персонажа для гри.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="shop" class="shop">
+  <h2>Магазин Послуг</h2>
+  <div class="shop-grid">
+    <div class="shop-item">
+      <div class="icon">💻</div>
+      <h3>Веб-дизайн: Малий пакет</h3>
+      <p>Простий сайт, до 5 сторінок, базовий дизайн.</p>
+      <p><strong>Ціна: $150</strong></p>
+      <button onclick="addToCart('Веб-дизайн: Малий пакет',150)">Додати в кошик</button>
+    </div>
+    <div class="shop-item">
+      <div class="icon">💻</div>
+      <h3>Веб-дизайн: Середній пакет</h3>
+      <p>Сайт до 10 сторінок, адаптивний дизайн, базова SEO оптимізація.</p>
+      <p><strong>Ціна: $250</strong></p>
+      <button onclick="addToCart('Веб-дизайн: Середній пакет',250)">Додати в кошик</button>
+    </div>
+    <div class="shop-item">
+      <div class="icon">💻</div>
+      <h3>Веб-дизайн: Преміум пакет</h3>
+      <p>Повний сайт під ключ, адаптивний, SEO, інтеграції, 20+ сторінок.</p>
+      <p><strong>Ціна: $400</strong></p>
+      <button onclick="addToCart('Веб-дизайн: Преміум пакет',400)">Додати в кошик</button>
+    </div>
+
+    <div class="shop-item">
+      <div class="icon">🎨</div>
+      <h3>Графіка: Малий пакет</h3>
+      <p>Банер/пост, базова графіка для соцмереж.</p>
+      <p><strong>Ціна: $30</strong></p>
+      <button onclick="addToCart('Графіка: Малий пакет',30)">Додати в кошик</button>
+    </div>
+    <div class="shop-item">
+      <div class="icon">🎨</div>
+      <h3>Графіка: Середній пакет</h3>
+      <p>5 постів/банерів, адаптовані для соцмереж.</p>
+      <p><strong>Ціна: $150</strong></p>
+      <button onclick="addToCart('Графіка: Середній пакет',150)">Додати в кошик</button>
+    </div>
+    <div class="shop-item">
+      <div class="icon">🎨</div>
+      <h3>Графіка: Преміум пакет</h3>
+      <p>Комплексний дизайн бренду, банери, соцмережі, презентації.</p>
+      <p><strong>Ціна: $300</strong></p>
+      <button onclick="addToCart('Графіка: Преміум пакет',300)">Додати в кошик</button>
+    </div>
+
+    <div class="shop-item">
+      <div class="icon">🛠️</div>
+      <h3>3D: Малий пакет</h3>
+      <p>Одна модель, простий рендер.</p>
+      <p><strong>Ціна: $100</strong></p>
+      <button onclick="addToCart('3D: Малий пакет',100)">Додати в кошик</button>
+    </div>
+    <div class="shop-item">
+      <div class="icon">🛠️</div>
+      <h3>3D: Середній пакет</h3>
+      <p>3 моделі, базові текстури, рендери.</p>
+      <p><strong>Ціна: $200</strong></p>
+      <button onclick="addToCart('3D: Середній пакет',200)">Додати в кошик</button>
+    </div>
+    <div class="shop-item">
+      <div class="icon">🛠️</div>
+      <h3>3D: Преміум пакет</h3>
+      <p>5+ моделей, текстури, анімація, рендери високої якості.</p>
+      <p><strong>Ціна: $400</strong></p>
+      <button onclick="addToCart('3D: Преміум пакет',400)">Додати в кошик</button>
+    </div>
+  </div>
+</section>
+
+<div class="cart-panel" id="cart-panel">
+  <h3>Ваш кошик</h3>
+  <ul id="cart-items"></ul>
+  <p><strong>Загальна сума: $<span id="cart-total">0</span></strong></p>
+  <button onclick="checkout()">Оформити замовлення</button>
+  <button onclick="toggleCart()">Закрити</button>
+</div>
+
+<div class="cart-button" onclick="toggleCart()">Кошик (<span id="cart-count">0</span>)</div>
+
+<section id="contact" class="contact">
+  <h2>Контакти</h2>
+  <form onsubmit="submitForm(event)">
+    <input type="text" placeholder="Ваше ім'я" required>
+    <input type="email" placeholder="Email" required>
+    <textarea placeholder="Повідомлення" rows="5" required></textarea>
+    <button type="submit">Відправити</button>
+  </form>
+</section>
+
+<footer>
+  <p>© 2025 Alex Sak. Всі права захищені.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
